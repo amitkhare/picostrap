@@ -1,0 +1,61 @@
+@import './reset.css';
+@import url('./bootstrap-4-utilities.min');
+@import url('./pico-bootstrap-grid.min.css');
+
+/* Pink Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --background-color: #fffdef;
+  --primary: #536b5c;
+  --primary-hover: #518866;
+  --primary-focus: rgba(112, 150, 41, 0.25);
+  --primary-inverse: #fdfff8;
+  --footer-background: #efffd1;
+  --footer-color: #0d1a19;
+  --nav-background-color: beige;
+  --nav-text-color: #536b5c;
+  --nav-nested-background-color: #536b5c;
+  --nav-nested-background-color-hover: #627e6d;
+  --nav-nested-text-color: #fff9e8;
+}
+
+/* Pink Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background-color: #0d1a19;
+    --primary: #817b29;
+    --primary-hover: #968f35;
+    --primary-focus: rgba(203, 242, 131, 0.25);
+    --primary-inverse: #fdfff8;
+    --footer-background: #050d0c;
+    --footer-color: #fffdef;
+    --nav-background-color: beige;
+    --nav-text-color: #536b5c;
+  }
+}
+
+/* Pink Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --background-color: #0d1a19;
+  --primary: #817b29;
+  --primary-hover: #968f35;
+  --primary-focus: rgba(203, 242, 131, 0.25);
+  --primary-inverse: #fdfff8;
+  --footer-background: #050d0c;
+  --footer-color: #fffdef;
+  --nav-background-color: beige;
+  --nav-text-color: #536b5c;
+}
+
+/* Pink (Common styles) */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+  --font-primary: 'serif';
+  --font-secondary: 'sans-serif';
+}
